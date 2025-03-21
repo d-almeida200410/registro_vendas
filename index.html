@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/poetry.png">
+    <title>Registro de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca para gerar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo da empresa -->
+        <div class="logo-container">
+            <img src="img/paperlogo.png" alt="Logo da Empresa" class="logo">
+        </div>
+
+        <h1>Registro de Vendas</h1>
+        <div class="form-container">
+            <input type="text" id="itemName" placeholder="Nome do Item">
+            <input type="number" id="itemQuantity" placeholder="Quantidade Vendida">
+            <button id="registerSale">Registrar Venda</button>
+        </div>
+        <div id="salesList" class="sales-list"></div>
+        <div id="totalSales" class="total-sales">
+            <strong>Total Ganho no Dia:</strong> R$ <span id="totalValue">0.00</span>
+        </div>
+        <button id="generateReport">Gerar Relatório PDF</button>
+    </div>
+    <!-- Firebase e scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
